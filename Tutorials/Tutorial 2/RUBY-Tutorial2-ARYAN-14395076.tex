@@ -1,0 +1,131 @@
+%Copyright 2014 Jean-Philippe Eisenbarth
+%This program is free software: you can 
+%redistribute it and/or modify it under the terms of the GNU General Public 
+%License as published by the Free Software Foundation, either version 3 of the 
+%License, or (at your option) any later version.
+%This program is distributed in the hope that it will be useful,but WITHOUT ANY 
+%WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+%PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%You should have received a copy of the GNU General Public License along with 
+%this program.  If not, see <http://www.gnu.org/licenses/>.
+
+%Based on the code of Yiannis Lazarides
+%http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
+%http://tex.stackexchange.com/users/963/yiannis-lazarides
+%Also based on the template of Karl E. Wiegers
+%http://www.se.rit.edu/~emad/teaching/slides/srs_template_sep14.pdf
+%http://karlwiegers.com
+
+
+\documentclass{scrreprt}
+
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[english]{babel}
+\hypersetup{
+	bookmarks=false,    % show bookmarks bar?
+	pdftitle={TUTORIAL2Ruby},    % title
+	pdfauthor={Adam-Ryan},                     % author
+	pdfsubject={TeX and LaTeX},                        % subject of the document
+	pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,       % color of internal links
+	citecolor=black,       % color of links to bibliography
+	filecolor=black,        % color of file links
+	urlcolor=blue,        % color of external links
+	linktoc=page            % only page is linked
+}%
+\def\myversion{1 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+	
+	\begin{flushright}
+		\rule{16cm}{5pt}\vskip1cm
+		\begin{bfseries}
+			\Huge{Tutorial 2\\}
+			\vspace{1.9cm}
+			for\\
+			\vspace{1.9cm}
+			Ruby Exploration
+			\vspace{1.9cm}
+			\LARGE{Version \myversion}\\
+			\vspace{1.9cm}
+			Adam Ryan (14395076)\\
+			\vspace{1.9cm}
+			COMP47530\\
+			\vspace{1.9cm}
+			\today\\
+		\end{bfseries}
+	\end{flushright}
+	
+	\tableofcontents
+	
+	\chapter{Questions}\label{Intro}
+	
+	
+	\section{Exercise 1 - Questions}\label{E1Q}
+	In irb and each of the primitives class and instance\_of? test the following to see types of object they are and explain why you get the answers you do:
+	\begin{enumerate}
+		\item "hello there big boy"
+		\item $56$
+		\item 34.00 
+		\item 0.222222354454365 
+		\item ("a", "b", "c")
+		\item +
+		\item PI 
+		\item Math::PI 
+		\item add 
+		\item hellow
+		\item hello = 8 and then check hello with class "goodbye"
+		\item (56 + 45.32)
+		\item (56 + 45)
+		\item 5.to\_s 
+		\item "5".to\_i 
+		\item five.to\_s
+	\end{enumerate}
+	
+	\section{Exercise 2 - Questions} \label{E2Q}
+	The following details the questions in section 2.
+	\begin{enumerate}
+		\item "hello there big boy".include?("boy")
+		\item "hello there big boy".include(" big")
+		\item "hello there big boy".include?(" ere")
+		\item What happens when you evaluate: ["a", "b", "c"] + ["d"]
+		\item What happens when you evaluate: ["a", "b", "c"] + "d"
+		\item Is there an easy way to capitalise words, so "hello" becomes "Hello" ?
+		\item In the same vein, make "hello" "HELLO".
+		\item Write a command to print out your name.
+		\item Write a method to print out your name.
+		\item Write a method to print out any name.
+		\item Set up the varibles, maxi, dick and twinko so that they are all assigned numbers but two of them are assigned to the same numbers. Then show with a series of equality tests which ones actually have the same value.
+		\item If you change the variables with the same number to be a Float and Fixnum does it change the results of the equality tests ?
+		\item Do a version of these test using strings rather than numbers.
+	\end{enumerate}
+	
+	
+		
+	\section{Exercise 3 - Questions}
+	What's a predicate?
+
+	\section{Exercise 4 - Questions}
+Define your own adding method that always adds 5 and 6 together.
+So, my\_add\_five\_to\_six => 11.
+
+		
+\section{Exercise 5 - Questions}
+Put this defined method in a file and call it using the ruby command outside of irb
+
+		
+\end{document}
