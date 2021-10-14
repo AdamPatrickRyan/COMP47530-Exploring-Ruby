@@ -32,7 +32,7 @@
 \usepackage[english]{babel}
 \hypersetup{
 	bookmarks=false,    % show bookmarks bar?
-	pdftitle={TUTORIAL2Ruby},    % title
+	pdftitle={Software Requirement Specification},    % title
 	pdfauthor={Adam-Ryan},                     % author
 	pdfsubject={TeX and LaTeX},                        % subject of the document
 	pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
@@ -96,6 +96,28 @@
 		\item five.to\_s
 	\end{enumerate}
 	
+	\section{Exercise 1 - Answers}\label{E1A}
+	Answers
+	\begin{enumerate}
+		\item "hello there big boy" is a string because it's a string.
+		\item $56$ is an Integer as it has no trailing decimals and is not a string.
+		\item 34.00  is a float
+		\item 0.222222354454365 is a float as it has a decimal which is non-zero. 
+		\item ("a", "b", "c") is an array
+		\item + returns a SyntaxError with .class because it does not have a class variable accessible
+		\item PI  returns uninitialized constant PI (NameError) because it hasn't been initialised.
+		\item Math::PI returns a float and is 3.14...
+		\item add returns an undefinied local variable when checking its class
+		\item hellow returns an uninitialised variable as it hasn't yet been set
+		\item hello = 8 and then check hello with class returns an integer because we've set the hello variable to be an integer with value 8.
+		\item "goodbye" returns a string because it's a string.
+		\item (56 + 45.32) returns a float because one of the values being added is a float
+		\item (56 + 45) returns an integer because both values are integers
+		\item 5.to\_s returns a string.
+		\item "5".to\_i  returns an integer
+		\item five.to\_s returns a variable not initialised error becuase five hasn't been defined.
+	\end{enumerate}
+	
 	\section{Exercise 2 - Questions} \label{E2Q}
 	The following details the questions in section 2.
 	\begin{enumerate}
@@ -114,18 +136,87 @@
 		\item Do a version of these test using strings rather than numbers.
 	\end{enumerate}
 	
+	\chapter{Exercise 2 -  Answers}\label{E2A}
+	
+	\begin{enumerate}
+		\item "hello there big boy".include?("boy") - Returns true 
+		\item "hello there big boy".include(" big") - Returns an error because it's the wrong function name.
+		\item "hello there big boy".include?(" ere") - Returns false because of the space
+		\item What happens when you evaluate: ["a", "b", "c"] + ["d"]  - It adds all elements in the second list into the first list; that is to say it unions the two.
+		\item What happens when you evaluate: ["a", "b", "c"] + "d" - It returns a type error as + isn't defined for adding two different types (string and a list)
+		\item Is there an easy way to capitalise words, so "hello" becomes "Hello" ? - "hello".capitalize
+		\item In the same vein, make "hello" "HELLO". - "hello".upcase
+		\item Write a command to print out your name. - puts "Adam Ryan"
+		\item Write a method to print out your name. 
+		\begin{verbatim}
+			def my_name
+				puts "Adam Ryan"
+			end 
+			
+			my_name
+		\end{verbatim}
+		\item Write a method to print out any name.
+		
+		\begin{verbatim}
+			def a_name(name)
+				puts name
+			end 
+			
+			a_name("Adam Ryan")
+	\end{verbatim}
+
+		\item Set up the variables, maxi, dick and twinko so that they are all assigned numbers but two of them are assigned to the same numbers. Then show with a series of equality tests which ones actually have the same value.
+		
+		\begin{verbatim}
+			maxi=1
+			dick=2
+			twinko=1
+			
+			maxi===maxi Returns True
+			maxi===dick Returns False
+			maxi===twinko Returns True
+			
+						
+			dick===maxi Returns False
+			dick===dick Returns True
+			dick===twinko Returns False
+			
+						
+			twinko===maxi Returns True
+			twinko===dick Returns False
+			twinko===twinko Returns True
+			
+		\end{verbatim}
+		\item If you change the variables with the same number to be a Float and Fixnum does it change the results of the equality tests ? - Fixnum is depreciated, however due to rounding there can be instances where the same number as a float and fixnum will not evaluate as equal.
+
+		\item Do a version of these test using strings rather than numbers. -  When the test is done as strings, setting one variable to "5" and another to 5 results in these two not equalling. When both are set as strings then they equal.
+	\end{enumerate}
 	
 		
 	\section{Exercise 3 - Questions}
 	What's a predicate?
 
+	\section{Exercise 3 - Answers}
+	Predicate methods in Ruby are those which end in a question mark to highlight that you are 'asking' a question to Ruby when calling these methods. These methods return true or false (and it is breaking convention to not do so).
+		
 	\section{Exercise 4 - Questions}
 Define your own adding method that always adds 5 and 6 together.
 So, my\_add\_five\_to\_six => 11.
+
+	\section{Exercise 4 - Answers}
+\begin{verbatim}
+	def my_add_five_to_six
+		5+6
+	end 
+	
+	my_add_five_to_six
+\end{verbatim}
 
 		
 \section{Exercise 5 - Questions}
 Put this defined method in a file and call it using the ruby command outside of irb
 
 		
+\section{Exercise 5 - Answers}
+Copy the above, paste it into a file called eleven.rb and call the file.
 \end{document}
